@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Clement's Stuff</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <h2>Let's enter some stuff!</h2>
+    <form method="post">
+      <label for="stuffType">Stuff Type:</label>
+      <input type="text" name="stuffType">
+      <br>
+      <br>
+      <label for="stuffTitle">Stuff Title:</label>
+      <input type="text" name="stuffTitle">
+      <br>
+      <br>
+      <label for="stuffImpFactor">Stuff Importance Factor:</label>
+      <input type="number" name="stuffImpFactor">
+      <br>
+      <input type="submit" min="1" max="5" name="stuffSubmit" value="Submit Stuff!">
+    </form>
+    <ul>
+      {{#stuff}}
+      <li>{{.}}</li>
+        {{/stuff}}
+    </ul>
+
+  </body>
+</html>
